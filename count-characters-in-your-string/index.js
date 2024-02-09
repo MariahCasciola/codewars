@@ -3,7 +3,7 @@
 function count(string) {
   const store = {};
   for (let i = 0; i < string.length; i++) {
-    store[string[i]] ? (store[string[i]] += 1) : (store[string[i]] = 1);
+    store[string[i]] ? (store[string[i]] ++ ) : (store[string[i]] = 1);
   }
   return store;
 }
