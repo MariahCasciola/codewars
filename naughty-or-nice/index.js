@@ -2,10 +2,12 @@ function naughtyOrNice(data) {
   let nice = 0;
   let naughty = 0;
   for (let month in data) {
-    for (let day in month) {
-      if (data[month][day] === "Naughty") {
+    let santasList = Object.values(data[month]);
+    for (let i = 0; i < santasList.length; i++) {
+      if (santasList[i] === "Naughty") {
         naughty++;
-      } else {
+      }
+      if (santasList[i] === "Nice") {
         nice++;
       }
     }
